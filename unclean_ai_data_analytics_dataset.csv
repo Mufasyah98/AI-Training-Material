@@ -1,0 +1,11 @@
+Order_ID,Customer_Name,Age,Gender,Country,Purchase_Amount,Purchase_Date,Payment_Method,Feedback
+A001,Ali,25,M,Malaysia,1200,2024-01-05,Card,Good service
+A002,Siti,30,F,Malaysia,850.50,05/01/2024,Cash,Late delivery
+A002,Siti,30,F,Malaysia,850.50,05/01/2024,Cash,Late delivery
+A004,John,Thirty Five,Male,USA,"1,500",2024/01/07,Credit Card,
+,Aminah,28,F,Malaysia,,,Card,👍
+A006,,,F,Malaysia,999,,Card,Bad!
+A007 ,ZUL,40,M,malaysia,1000 ,2024-13-01,E-wallet,OK
+A008,zul,40,m,Malaysia ,One Thousand,2024-01-10,Ewallet,ok
+A009,Farah,-5,,UK,-300,2024-01-11,,Terrible service!!!
+A010,Farah,200,Female,,5000,2024-01-11,Cash,
