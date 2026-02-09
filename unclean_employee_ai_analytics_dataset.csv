@@ -1,0 +1,11 @@
+Employee_ID,Employee_Name,Department,Age,Salary,Join_Date,Performance_Score,Promotion_Eligible
+E001,Ahmad,Sales,29,3500,2020-01-15,4.5,Yes
+E002,Nur,HR,Thirty,"4,000",15/02/2021,Excellent,Y
+E002,Nur,HR,30,4000,15/02/2021,4.8,Y
+E004,Jason,IT,45,,2021/03/01,3,No
+E005 ,Aisyah,Finance,,5500 ,,,N
+,Hafiz,Finance,27,Six Thousand,,2,
+E007,,IT ,200,-4500,2022-14-01,6,yes
+E008,Zara,it,-3,7000,2022-05-20,-1,no
+E009,Zara,,34,7000,2022-05-20,4,Yes 
+E010,Amir,Sales,34,,2023-01-01,Good,
