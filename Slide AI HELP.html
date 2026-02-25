@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Workplace Productivity: Trainer's Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --bg-dark: #050811;
+            --accent-blue: #3b82f6;
+            --accent-purple: #a855f7;
+            --accent-pink: #ec4899;
+            --accent-emerald: #10b981;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .timeline-badge {
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 99px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .tool-card {
+            border-left: 3px solid transparent;
+        }
+        .tool-card:hover { border-left-color: var(--accent-blue); }
+
+        .pulse-emerald {
+            animation: pulse-emerald 2s infinite;
+        }
+
+        @keyframes pulse-emerald {
+            0% { box-shadow: 0 0 0 0px rgba(16, 185, 129, 0.2); }
+            100% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+        }
+
+        #trainer-block { border-left: 4px solid var(--accent-blue); }
+    </style>
+</head>
+<body class="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black min-h-screen pb-20">
+
+    <!-- Navbar / Trainer Identity -->
+    <nav class="sticky top-0 z-50 glass-card mx-6 mt-6 rounded-2xl px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-xl flex items-center justify-center font-bold text-white">AI</div>
+            <div>
+                <h1 class="font-extrabold text-lg tracking-tight">AI Evolution <span class="text-blue-400">Masterclass</span></h1>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Training Framework v3.0</p>
+            </div>
+        </div>
+        <div id="trainer-block" class="bg-white/5 px-4 py-2 rounded-lg flex items-center gap-4">
+            <div class="text-right">
+                <p class="text-[10px] text-slate-500 font-bold uppercase">Lead Trainer</p>
+                <h3 class="text-sm font-bold text-slate-200" id="trainer-name">Fakhrul Syahmi</h3>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-slate-800 border border-white/10 flex items-center justify-center overflow-hidden">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQGHsgysaG7okw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1700611785199?e=2147483647&v=beta&t=XnSPmT8r-3gCdb_iuse36FxvEis_axLSQSVzFhaWvL4" alt="Fakhrul Syahmi" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 mt-16">
+        <!-- Main Intro -->
+        <div class="max-w-4xl mb-12">
+            <h2 class="text-4xl md:text-6xl font-black mb-6 leading-[1.1]">AI for <br><span class="gradient-text">Workplace Productivity</span></h2>
+            <p class="text-slate-400 text-lg">Mastering the transition from static automation to physical intelligence. Empowering the modern workforce with next-gen AI frameworks.</p>
+        </div>
+
+        <!-- SECTION: ABOUT MYSELF -->
+        <div class="glass-card p-8 rounded-[3rem] mb-12 border-white/10 bg-gradient-to-r from-blue-600/10 to-transparent">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-40 h-40 rounded-3xl bg-slate-800 border border-white/10 overflow-hidden shrink-0 shadow-2xl">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQGHsgysaG7okw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1700611785199?e=2147483647&v=beta&t=XnSPmT8r-3gCdb_iuse36FxvEis_axLSQSVzFhaWvL4" alt="Fakhrul Syahmi" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold text-blue-400 uppercase tracking-[0.3em] mb-2">Meet Your Trainer</h3>
+                    <h4 class="text-3xl font-black mb-3">Fakhrul Syahmi</h4>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+                            <i class="fas fa-briefcase text-slate-400 text-sm"></i>
+                            <span class="text-sm font-medium text-slate-300">Data & AI Automation Consultant</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/5">
+                            <i class="fas fa-graduation-cap text-slate-400 text-sm"></i>
+                            <span class="text-sm font-medium text-slate-300">Master Data Science</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm mt-4 leading-relaxed max-w-2xl">
+                        Dedicated to bridging the gap between advanced data science and practical workplace automation. Helping organizations leverage AI to scale productivity and human potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: WHAT IS AI? -->
+        <div class="glass-card p-10 rounded-[3rem] mb-12 border-blue-500/20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-black mb-6">What is <span class="text-blue-400">AI?</span></h3>
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        At its core, **Artificial Intelligence** is the simulation of human intelligence by computer systems. Unlike traditional software that follows rigid "if-then" rules, modern AI uses **Mathematical Probability** to learn from experience.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                            <i class="fas fa-brain text-blue-400 mb-2"></i>
+                            <h4 class="font-bold text-sm mb-1">Learning</h4>
+                            <p class="text-[11px] text-slate-500">Acquiring information and rules for using it.</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                            <i class="fas fa-puzzle-piece text-purple-400 mb-2"></i>
+                            <h4 class="font-bold text-sm mb-1">Reasoning</h4>
+                            <p class="text-[11px] text-slate-500">Using rules to reach approximate or definite conclusions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-600/5 rounded-[2rem] p-8 border border-blue-500/10">
+                    <h4 class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-4">The Foundation</h4>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center shrink-0"><i class="fas fa-database text-blue-400 text-xs"></i></div>
+                            <div>
+                                <p class="text-sm font-bold">Data-Driven Intelligence</p>
+                                <p class="text-[11px] text-slate-500">Intelligence is "mined" from vast datasets rather than manually programmed.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center shrink-0"><i class="fas fa-microchip text-purple-400 text-xs"></i></div>
+                            <div>
+                                <p class="text-sm font-bold">Neural Networks</p>
+                                <p class="text-[11px] text-slate-500">Software architectures inspired by biological neurons in the human brain.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 PHASES GRID -->
+        <h3 class="text-xs font-bold text-slate-500 uppercase tracking-[0.4em] mb-8 text-center">The Evolutionary Path</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            
+            <!-- Perception -->
+            <div class="glass-card p-8 rounded-[2rem] flex flex-col">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="timeline-badge bg-blue-500/10 text-blue-400">2010 - 2021</span>
+                    <i class="fas fa-eye text-blue-400 text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Perception AI</h3>
+                <p class="text-slate-500 text-xs font-bold mb-4">SENSE & LABEL</p>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">Identifying patterns in data. Converting real-world sensory input into structured digital labels.</p>
+                <div class="space-y-4">
+                    <div class="bg-white/5 p-3 rounded-xl">
+                        <p class="text-[10px] text-slate-500 font-bold mb-1">KEY MODELS</p>
+                        <p class="text-sm font-bold text-blue-300">CNN, RNN, ResNet</p>
+                    </div>
+                    <ul class="text-[11px] text-slate-300 space-y-2">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Face & Object Detection</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Spam & Fraud Detection</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Predictive Analytics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Generative -->
+            <div class="glass-card p-8 rounded-[2rem] flex flex-col border-purple-500/20 shadow-[0_0_30px_-10px_rgba(168,85,247,0.2)]">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="timeline-badge bg-purple-500/10 text-purple-400">2022 - 2023</span>
+                    <i class="fas fa-magic text-purple-400 text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">GenAI</h3>
+                <p class="text-slate-500 text-xs font-bold mb-4">CREATE & REASON</p>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">Synthesizing knowledge. Predicting the next token to generate novel text, code, and media.</p>
+                <div class="space-y-4">
+                    <div class="bg-white/5 p-3 rounded-xl border border-purple-500/10">
+                        <p class="text-[10px] text-slate-500 font-bold mb-1">KEY MODELS</p>
+                        <p class="text-sm font-bold text-purple-300">LLM (GPT-4, Claude)</p>
+                    </div>
+                    <ul class="text-[11px] text-slate-300 space-y-2">
+                        <li><i class="fas fa-sparkles text-purple-500 mr-2"></i>Content Synthesis</li>
+                        <li><i class="fas fa-sparkles text-purple-500 mr-2"></i>Software Engineering</li>
+                        <li><i class="fas fa-sparkles text-purple-500 mr-2"></i>Creative Design</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Agentic -->
+            <div class="glass-card p-8 rounded-[2rem] flex flex-col border-pink-500/20 shadow-[0_0_30px_-10px_rgba(236,72,153,0.2)]">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="timeline-badge bg-pink-500/10 text-pink-400">2024 - PRESENT</span>
+                    <i class="fas fa-brain text-pink-400 text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Agentic AI</h3>
+                <p class="text-slate-500 text-xs font-bold mb-4">PLAN & EXECUTE</p>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">Autonomous systems that use digital tools to perform complex, multi-step workflows with minimal supervision.</p>
+                <div class="space-y-4">
+                    <div class="bg-white/5 p-3 rounded-xl border border-pink-500/10">
+                        <p class="text-[10px] text-slate-500 font-bold mb-1">KEY MODELS</p>
+                        <p class="text-sm font-bold text-pink-300">LAM (Skyvern, MultiOn)</p>
+                    </div>
+                    <ul class="text-[11px] text-slate-300 space-y-2">
+                        <li><i class="fas fa-bolt text-pink-500 mr-2"></i>Goal-Oriented Reasoning</li>
+                        <li><i class="fas fa-bolt text-pink-500 mr-2"></i>API & Tool Orchestration</li>
+                        <li><i class="fas fa-bolt text-pink-500 mr-2"></i>Self-Correction Loops</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Physical -->
+            <div class="glass-card p-8 rounded-[2rem] flex flex-col border-emerald-500/20 pulse-emerald">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="timeline-badge bg-emerald-500/10 text-emerald-400">2025+ FRONTIER</span>
+                    <i class="fas fa-robot text-emerald-400 text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Physical AI</h3>
+                <p class="text-slate-500 text-xs font-bold mb-4">EMBODY & MOVE</p>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">Large Robotics Models translating cognitive intent into spatial motion and physics-based interactions.</p>
+                <div class="space-y-4">
+                    <div class="bg-white/5 p-3 rounded-xl border border-emerald-500/10">
+                        <p class="text-[10px] text-slate-500 font-bold mb-1">KEY MODELS</p>
+                        <p class="text-sm font-bold text-emerald-300">LRM (Cosmos, RT-2, FSD)</p>
+                    </div>
+                    <ul class="text-[11px] text-slate-300 space-y-2">
+                        <li><i class="fas fa-cube text-emerald-500 mr-2"></i>Spatial Intelligence</li>
+                        <li><i class="fas fa-cube text-emerald-500 mr-2"></i>Humanoid Autonomy</li>
+                        <li><i class="fas fa-cube text-emerald-500 mr-2"></i>World Models (Sim2Real)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION: POPULAR AI TOOLS (Pros & Cons) -->
+        <div class="mb-20">
+            <h3 class="text-2xl font-black mb-8 flex items-center gap-3 text-center lg:text-left">
+                <i class="fas fa-tools text-blue-400"></i>
+                Popular AI Tools Comparison
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                
+                <!-- ChatGPT -->
+                <div class="glass-card p-6 rounded-3xl tool-card">
+                    <h4 class="font-extrabold text-white mb-3 flex items-center justify-between">
+                        ChatGPT <span class="text-[10px] text-slate-500 italic">OpenAI</span>
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="text-[10px] text-emerald-400 font-bold uppercase"><i class="fas fa-plus-circle mr-1"></i> Pros</div>
+                        <p class="text-[11px] text-slate-400">Exceptional reasoning, massive plugin ecosystem, best-in-class coding (GPT-4o/o1).</p>
+                        <div class="text-[10px] text-rose-400 font-bold uppercase"><i class="fas fa-minus-circle mr-1"></i> Cons</div>
+                        <p class="text-[11px] text-slate-400">Can be "wordy", higher pricing for Pro tiers, data privacy concerns in free versions.</p>
+                    </div>
+                </div>
+
+                <!-- Gemini -->
+                <div class="glass-card p-6 rounded-3xl tool-card">
+                    <h4 class="font-extrabold text-white mb-3 flex items-center justify-between">
+                        Gemini <span class="text-[10px] text-slate-500 italic">Google</span>
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="text-[10px] text-emerald-400 font-bold uppercase"><i class="fas fa-plus-circle mr-1"></i> Pros</div>
+                        <p class="text-[11px] text-slate-400">Massive 2M context window, deep Google Workspace integration, strong multimodality.</p>
+                        <div class="text-[10px] text-rose-400 font-bold uppercase"><i class="fas fa-minus-circle mr-1"></i> Cons</div>
+                        <p class="text-[11px] text-slate-400">Inconsistent creative writing tone, occasionally aggressive safety filtering.</p>
+                    </div>
+                </div>
+
+                <!-- Claude -->
+                <div class="glass-card p-6 rounded-3xl tool-card">
+                    <h4 class="font-extrabold text-white mb-3 flex items-center justify-between">
+                        Claude <span class="text-[10px] text-slate-500 italic">Anthropic</span>
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="text-[10px] text-emerald-400 font-bold uppercase"><i class="fas fa-plus-circle mr-1"></i> Pros</div>
+                        <p class="text-[11px] text-slate-400">Most human-like writing, lowest hallucination rate, excellent at long doc analysis.</p>
+                        <div class="text-[10px] text-rose-400 font-bold uppercase"><i class="fas fa-minus-circle mr-1"></i> Cons</div>
+                        <p class="text-[11px] text-slate-400">Lacks native image generation, smaller tool ecosystem compared to ChatGPT.</p>
+                    </div>
+                </div>
+
+                <!-- Qwen -->
+                <div class="glass-card p-6 rounded-3xl tool-card">
+                    <h4 class="font-extrabold text-white mb-3 flex items-center justify-between">
+                        Qwen AI <span class="text-[10px] text-slate-500 italic">Alibaba</span>
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="text-[10px] text-emerald-400 font-bold uppercase"><i class="fas fa-plus-circle mr-1"></i> Pros</div>
+                        <p class="text-[11px] text-slate-400">Stellar multilingual support, open-source weights, highly cost-effective for dev.</p>
+                        <div class="text-[10px] text-rose-400 font-bold uppercase"><i class="fas fa-minus-circle mr-1"></i> Cons</div>
+                        <p class="text-[11px] text-slate-400">Regional availability limits, less polished English-centric UI for general users.</p>
+                    </div>
+                </div>
+
+                <!-- DeepSeek -->
+                <div class="glass-card p-6 rounded-3xl tool-card">
+                    <h4 class="font-extrabold text-white mb-3 flex items-center justify-between">
+                        DeepSeek <span class="text-[10px] text-slate-500 italic">DeepSeek</span>
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="text-[10px] text-emerald-400 font-bold uppercase"><i class="fas fa-plus-circle mr-1"></i> Pros</div>
+                        <p class="text-[11px] text-slate-400">Disruptive cost-to-performance ratio, open-source R1 model, powerhouse in math/coding.</p>
+                        <div class="text-[10px] text-rose-400 font-bold uppercase"><i class="fas fa-minus-circle mr-1"></i> Cons</div>
+                        <p class="text-[11px] text-slate-400">Lacks multimodal (voice/image) features, infrastructure still scaling to global demand.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER CONTENT & GLOSSARY -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-12">
+            <div class="lg:col-span-8">
+                <div class="bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-white/10 p-10 rounded-[3rem]">
+                    <i class="fas fa-quote-left text-2xl text-blue-400 mb-4"></i>
+                    <h4 class="font-bold text-white mb-2 underline decoration-blue-500/40 text-xl">Trainer's Insight</h4>
+                    <p class="text-slate-300 text-base italic leading-relaxed">
+                        "The evolution from GenAI to Physical AI isn't just about better models; it's about shifting from **knowledge retrieval** to **world manipulation**. We are teaching AI to understand the laws of physics, not just the rules of grammar. This journey from 'knowing' to 'doing' is the final frontier of AGI."
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4 glass-card p-8 rounded-[2rem]">
+                <h4 class="font-bold text-white mb-6 flex items-center gap-2">
+                    <i class="fas fa-list-ul text-slate-400"></i>
+                    Student Glossary
+                </h4>
+                <div class="space-y-4">
+                    <div class="group cursor-help">
+                        <p class="text-xs font-bold text-blue-400 group-hover:text-blue-300">LLM &bull; Large Language Model</p>
+                        <p class="text-[10px] text-slate-500 leading-tight mt-1">Foundational brain focused on semantic processing.</p>
+                    </div>
+                    <div class="group cursor-help">
+                        <p class="text-xs font-bold text-pink-400 group-hover:text-pink-300">LAM &bull; Large Action Model</p>
+                        <p class="text-[10px] text-slate-500 leading-tight mt-1">Execution engine that understands software interfaces.</p>
+                    </div>
+                    <div class="group cursor-help">
+                        <p class="text-xs font-bold text-emerald-400 group-hover:text-emerald-300">LRM &bull; Large Robotics Model</p>
+                        <p class="text-[10px] text-slate-500 leading-tight mt-1">Spatial intelligence mapping intent to physical force.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: ENHANCING WORKPLACE PRODUCTIVITY -->
+        <div class="glass-card p-10 rounded-[3rem] mb-20 border-emerald-500/20 bg-gradient-to-br from-emerald-600/5 to-transparent">
+            <h3 class="text-3xl font-black mb-10 flex items-center gap-4">
+                <i class="fas fa-rocket text-emerald-400"></i>
+                AI-Driven Workplace Transformation
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Efficiency -->
+                <div class="p-6 bg-white/5 rounded-[2rem] border border-white/5">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-4 border border-emerald-500/20">
+                        <i class="fas fa-tachometer-alt text-emerald-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Automated Efficiency</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">AI automates repetitive, high-volume tasks like data entry, scheduling, and basic reporting, freeing up human hours for strategic high-value work.</p>
+                </div>
+
+                <!-- Decision Support -->
+                <div class="p-6 bg-white/5 rounded-[2rem] border border-white/5">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-4 border border-blue-500/20">
+                        <i class="fas fa-chart-line text-blue-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Augmented Decision Making</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Processing millions of data points in seconds, AI provides real-time insights and predictive analytics to help leaders make more informed, data-backed decisions.</p>
+                </div>
+
+                <!-- Creative Augmentation -->
+                <div class="p-6 bg-white/5 rounded-[2rem] border border-white/5">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-4 border border-purple-500/20">
+                        <i class="fas fa-lightbulb text-purple-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Creative Augmentation</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Tools like LLMs act as a "creative co-pilot," helping teams draft copy, generate visual concepts, and prototype code at 10x the traditional speed.</p>
+                </div>
+
+                <!-- Personalized Learning -->
+                <div class="p-6 bg-white/5 rounded-[2rem] border border-white/5">
+                    <div class="w-12 h-12 bg-pink-500/20 rounded-2xl flex items-center justify-center mb-4 border border-pink-500/20">
+                        <i class="fas fa-user-graduate text-pink-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Hyper-Personalized Upskilling</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">AI tailors learning paths for employees, identifying skill gaps and providing micro-learning content to foster a culture of continuous improvement.</p>
+                </div>
+
+                <!-- Precision Communication -->
+                <div class="p-6 bg-white/5 rounded-[2rem] border border-white/5">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-4 border border-blue-500/20">
+                        <i class="fas fa-comments text-blue-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Precision Communication</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Multilingual translation and tone-optimization tools ensure that global teams communicate without friction or misunderstanding.</p>
+                </div>
+
+                <!-- Workflow Orchestration -->
+                <div class="p-6 bg-white/5 rounded-[2rem] border border-white/5">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-4 border border-emerald-500/20">
+                        <i class="fas fa-project-diagram text-emerald-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Workflow Orchestration</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Agentic AI coordinates between different software platforms (CRM, Slack, Email) to ensure complex cross-functional projects move forward automatically.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-24 text-center border-t border-white/5 pt-12">
+            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em] font-bold">Generated for Educational Excellence &bull; 2025</p>
+        </footer>
+    </div>
+
+    <!-- Trainer Settings -->
+    <div id="trainer-settings" class="fixed bottom-6 right-6 z-[100]">
+        <button onclick="toggleTrainerEdit()" class="w-12 h-12 bg-white text-black rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform">
+            <i class="fas fa-edit"></i>
+        </button>
+        <div id="edit-panel" class="hidden absolute bottom-16 right-0 w-64 glass-card p-4 rounded-xl shadow-2xl border border-white/20">
+            <h5 class="text-xs font-bold mb-3 uppercase tracking-wider">Trainer Settings</h5>
+            <input type="text" id="name-input" placeholder="Your Name" class="w-full bg-slate-900 border border-white/10 rounded px-2 py-1 text-xs mb-2">
+            <button onclick="updateName()" class="w-full bg-blue-600 py-1 rounded text-xs font-bold">Apply Changes</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleTrainerEdit() {
+            const panel = document.getElementById('edit-panel');
+            panel.classList.toggle('hidden');
+        }
+
+        function updateName() {
+            const input = document.getElementById('name-input');
+            const display = document.getElementById('trainer-name');
+            if(input.value.trim()) {
+                display.innerText = input.value;
+                toggleTrainerEdit();
+            }
+        }
+    </script>
+</body>
+</html>
